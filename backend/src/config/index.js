@@ -44,15 +44,20 @@ const config = {
   // AI Model Configuration
   temperature: 0.7,
   maxTokens: 1000,
+
+  // JWT Configuration
+  jwtSecret: process.env.JWT_SECRET || 'local-secret-key-default',
 };
 
-// Validate required environment variables
-const requiredEnvVars = ['GEMINI_API_KEY'];
-const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
+// Validate required environment variables only in production
+if (config.nodeEnv === 'production') {
+  const requiredEnvVars = ['GEMINI_API_KEY'];
+  const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
 
-if (missingEnvVars.length > 0) {
-  console.error(`❌ Missing required environment variables: ${missingEnvVars.join(', ')}`);
-  process.exit(1);
+  if (missingEnvVars.length > 0) {
+    console.error(`❌ Missing required environment variables: ${missingEnvVars.join(', ')}`);
+    process.exit(1);
+  }
 }
 
 export default config;
