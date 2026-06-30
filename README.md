@@ -435,4 +435,123 @@ This project demonstrates practical implementation of
 
 ---
 
+# 🔑 Environment Variables
+
+Create a `.env` file inside the `backend` folder and add the following:
+
+```env
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+JWT_SECRET=YOUR_SECRET_KEY
+```
+
+Replace `YOUR_GEMINI_API_KEY` with your own Google Gemini API key before running the application.
+
+# ⚙️ How to Run the Project
+
+## Prerequisites
+
+Make sure you have installed:
+
+- Node.js (v18 or later)
+- npm
+- Git
+- A Google Gemini API Key
+
+---
+
+## Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Prathamesh-1705/RAG_Document_Assistant.git
+```
+
+```bash
+cd RAG_Document_Assistant
+```
+
+---
+
+## Step 2: Open the Project
+
+Open the **RAG_Document_Assistant** folder in **Visual Studio Code** (or any IDE of your choice).
+
+---
+
+## Step 3: Start the Backend Server
+
+Open the **first terminal** inside VS Code.
+
+Navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+Install dependencies (first time only):
+
+```bash
+npm install
+```
+
+Create the SQLite database using Prisma:
+
+```bash
+npx prisma db push
+```
+
+Now start the backend server:
+
+```bash
+npm run dev
+```
+
+The backend server will start successfully.
+
+---
+
+## Step 4: Start the Frontend
+
+Open a **second terminal**.
+
+Navigate to the frontend folder:
+
+```bash
+cd RDA-frontend
+```
+
+Install dependencies (first time only):
+
+```bash
+npm install
+```
+
+Start the React application:
+
+```bash
+npm run dev
+```
+
+---
+
+## Step 5: Open the Application
+
+After the frontend starts, Vite will display a local URL similar to:
+
+```text
+http://localhost:5173
+```
+
+Open this link in your browser.
+
+🎉 Your **RAG Document Assistant** is now ready to use!
+
+You can now:
+
+- 📄 Upload PDF, DOCX, PPTX, CSV, or Excel files
+- 💬 Chat with your documents
+- 🔍 Perform Semantic & Hybrid Search
+- 📊 Analyze spreadsheets
+- 🤖 Train Machine Learning models
+- 🧠 Create custom AI agents
+- 📑 View source citations for every response
 
