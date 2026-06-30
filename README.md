@@ -435,15 +435,4 @@ This project demonstrates practical implementation of
 
 ---
 
-# 👨‍💻 Author
 
-**Prathamesh Tirmare**
-
-AI & Data Science Engineer
-
-GitHub:
-https://github.com/Prathamesh-1705
-
----
-
-## ⭐ If you found this project useful, don't forget to Star the repository!
