@@ -390,25 +390,6 @@ http://localhost:5173
 ```
 🎉 Your **RAG Document Assistant** is now ready to use!
 
----
-
-# 📷 Screenshots
-
-> Add screenshots here
-
-```
-Home Page
-
-Dashboard
-
-Knowledge Base
-
-Chat Interface
-
-Sandbox
-
-Agent Studio
-```
 
 ---
 
