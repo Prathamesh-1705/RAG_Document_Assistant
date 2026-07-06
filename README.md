@@ -309,51 +309,86 @@ RAG_Document_Assistant
 
 ---
 
-# ⚡ Installation
+# ⚡ Setup & Installation
 
-## Clone Repository
+## 📋 Prerequisites
+Ensure you have the following installed on your machine:
+- **Node.js** (v18 or later)
+- **npm** (comes with Node.js)
+- **Git**
+- A **Google Gemini API Key** (from [Google AI Studio](https://aistudio.google.com/))
 
+---
+
+## ⚙️ Step-by-Step Guide
+
+### Step 1: Clone the Repository
+Clone the project and navigate into the root directory:
 ```bash
 git clone https://github.com/Prathamesh-1705/RAG_Document_Assistant.git
-```
-
-```
 cd RAG_Document_Assistant
 ```
 
----
-
-## Backend
-
+### Step 2: Configure Environment Variables
+Create a `.env` file inside the `backend` folder:
+```bash
+# Create the file (or copy backend/.env.example)
+touch backend/.env
 ```
+Add the following content to `backend/.env` (replace with your actual values):
+```env
+PORT=5000
+NODE_ENV=development
+FRONTEND_URL=http://localhost:5173
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+JWT_SECRET=YOUR_JWT_SECRET_KEY
+```
+
+### Step 3: Install Dependencies & Setup Database
+Install the npm packages in the root, backend, and frontend directories, and synchronize the SQLite database using Prisma:
+```bash
+# Install root, backend, and frontend dependencies
+npm install
+npm install --prefix backend
+npm install --prefix RDA-frontend
+
+# Set up local SQLite database
 cd backend
-
-npm install
-
 npx prisma db push
-
-npm run dev
+cd ..
 ```
 
 ---
 
-## Frontend
+## 🏃 Running the Application
 
-```
-cd RDA-frontend
-
-npm install
-
+### ⚡ Option A: The Easy Way (Single Terminal)
+You can run both the frontend and backend simultaneously from the **root directory** using the pre-configured script:
+```bash
 npm run dev
 ```
 
+### 🛠️ Option B: The Manual Way (Two Terminals)
+If you prefer running them in separate terminals:
+* **Terminal 1 (Backend):**
+  ```bash
+  cd backend
+  npm run dev
+  ```
+* **Terminal 2 (Frontend):**
+  ```bash
+  cd RDA-frontend
+  npm run dev
+  ```
+
 ---
 
-## Open
-
-```
+## 🌐 Accessing the App
+Once started, open your browser and navigate to:
+```text
 http://localhost:5173
 ```
+🎉 Your **RAG Document Assistant** is now ready to use!
 
 ---
 
@@ -435,123 +470,4 @@ This project demonstrates practical implementation of
 
 ---
 
-# 🔑 Environment Variables
-
-Create a `.env` file inside the `backend` folder and add the following:
-
-```env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-JWT_SECRET=YOUR_SECRET_KEY
-```
-
-Replace `YOUR_GEMINI_API_KEY` with your own Google Gemini API key before running the application.
-
-# ⚙️ How to Run the Project
-
-## Prerequisites
-
-Make sure you have installed:
-
-- Node.js (v18 or later)
-- npm
-- Git
-- A Google Gemini API Key
-
----
-
-## Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/Prathamesh-1705/RAG_Document_Assistant.git
-```
-
-```bash
-cd RAG_Document_Assistant
-```
-
----
-
-## Step 2: Open the Project
-
-Open the **RAG_Document_Assistant** folder in **Visual Studio Code** (or any IDE of your choice).
-
----
-
-## Step 3: Start the Backend Server
-
-Open the **first terminal** inside VS Code.
-
-Navigate to the backend folder:
-
-```bash
-cd backend
-```
-
-Install dependencies (first time only):
-
-```bash
-npm install
-```
-
-Create the SQLite database using Prisma:
-
-```bash
-npx prisma db push
-```
-
-Now start the backend server:
-
-```bash
-npm run dev
-```
-
-The backend server will start successfully.
-
----
-
-## Step 4: Start the Frontend
-
-Open a **second terminal**.
-
-Navigate to the frontend folder:
-
-```bash
-cd RDA-frontend
-```
-
-Install dependencies (first time only):
-
-```bash
-npm install
-```
-
-Start the React application:
-
-```bash
-npm run dev
-```
-
----
-
-## Step 5: Open the Application
-
-After the frontend starts, Vite will display a local URL similar to:
-
-```text
-http://localhost:5173
-```
-
-Open this link in your browser.
-
-🎉 Your **RAG Document Assistant** is now ready to use!
-
-You can now:
-
-- 📄 Upload PDF, DOCX, PPTX, CSV, or Excel files
-- 💬 Chat with your documents
-- 🔍 Perform Semantic & Hybrid Search
-- 📊 Analyze spreadsheets
-- 🤖 Train Machine Learning models
-- 🧠 Create custom AI agents
-- 📑 View source citations for every response
 
