@@ -29,6 +29,12 @@ logs/*
 ehthumbs.db
 Thumbs.db
 
+# Database files
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
 # IDE
 .vscode/
 .idea/
