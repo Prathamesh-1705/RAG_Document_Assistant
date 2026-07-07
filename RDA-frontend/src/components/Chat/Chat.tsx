@@ -444,7 +444,7 @@ export const Chat = ({
                     </div>
                     <button
                       type="button"
-                      className="h-6 px-1.5 text-[10px] font-medium uppercase tracking-wider opacity-60 hover:opacity-100 hover:bg-destructive/15 hover:text-destructive text-muted-foreground border border-muted-foreground/30 hover:border-destructive/30 shrink-0 disabled:opacity-30 transition-all flex items-center justify-center rounded-md ml-1"
+                      style={{ color: '#ef4444', marginLeft: '12px', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', background: 'none', border: 'none', padding: '2px 6px' }}
                       onClick={(e) => deleteSession(session.id, e)}
                     >
                       Delete
