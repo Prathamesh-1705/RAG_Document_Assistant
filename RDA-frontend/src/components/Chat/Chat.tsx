@@ -450,16 +450,19 @@ export const Chat = ({
                         top: '50%', 
                         transform: 'translateY(-50%)', 
                         color: '#ef4444', 
-                        fontSize: '11px', 
-                        fontWeight: 'bold', 
                         cursor: 'pointer', 
                         background: 'none', 
                         border: 'none', 
-                        padding: '2px 6px' 
+                        padding: '4px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        opacity: 0.6
                       }}
+                      className="hover:bg-destructive/10 hover:opacity-100 rounded transition-all"
                       onClick={(e) => deleteSession(session.id, e)}
                     >
-                      Delete
+                      <Trash2 className="w-3.5 h-3.5" />
                     </button>
                   </div>
                 ))}
