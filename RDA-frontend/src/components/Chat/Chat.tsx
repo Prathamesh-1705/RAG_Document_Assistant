@@ -415,7 +415,7 @@ export const Chat = ({
         {showHistory && (
           <div className="w-64 border-r border-border bg-muted/10 flex flex-col h-full flex-shrink-0 absolute md:relative z-20 md:z-auto shadow-lg md:shadow-none bg-background md:bg-muted/10">
             <div className="p-3 border-b border-border flex items-center justify-between bg-background">
-              <span className="font-semibold text-sm flex items-center gap-2"><History className="w-4 h-4" /> Chat History Test</span>
+              <span className="font-semibold text-sm flex items-center gap-2"><History className="w-4 h-4" /> Chat History</span>
               <Button variant="ghost" size="icon" onClick={() => setShowHistory(false)} className="h-8 w-8 hover:bg-muted">
                 <X className="w-4 h-4" />
               </Button>
