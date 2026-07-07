@@ -444,10 +444,10 @@ export const Chat = ({
                     </div>
                     <button
                       type="button"
-                      className="h-6 w-6 opacity-40 hover:opacity-100 hover:bg-destructive/10 hover:text-destructive shrink-0 disabled:opacity-50 transition-opacity flex items-center justify-center rounded"
+                      className="h-6 px-1.5 text-[10px] font-medium uppercase tracking-wider opacity-60 hover:opacity-100 hover:bg-destructive/15 hover:text-destructive text-muted-foreground border border-muted-foreground/30 hover:border-destructive/30 shrink-0 disabled:opacity-30 transition-all flex items-center justify-center rounded-md ml-1"
                       onClick={(e) => deleteSession(session.id, e)}
                     >
-                      <Trash2 className="w-3.5 h-3.5" />
+                      Delete
                     </button>
                   </div>
                 ))}
