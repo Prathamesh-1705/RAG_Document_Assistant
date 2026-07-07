@@ -29,7 +29,7 @@ class RAGService {
     // Initialize Gemini API
     this.genAI = new GoogleGenerativeAI(config.geminiApiKey);
     this.model = this.genAI.getGenerativeModel({
-      model: 'gemini-2.5-flash-lite',
+      model: 'gemini-2.5-flash',
       generationConfig: {
         temperature: 0.7,
         topK: 40,
