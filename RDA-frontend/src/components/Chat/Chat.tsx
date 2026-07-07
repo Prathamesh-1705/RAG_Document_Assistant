@@ -445,7 +445,7 @@ export const Chat = ({
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-6 w-6 md:opacity-0 md:group-hover:opacity-100 hover:bg-destructive/10 hover:text-destructive shrink-0 disabled:opacity-50 transition-opacity"
+                      className="h-6 w-6 opacity-40 hover:opacity-100 hover:bg-destructive/10 hover:text-destructive shrink-0 disabled:opacity-50 transition-opacity"
                       onClick={(e) => deleteSession(session.id, e)}
                     >
                       <Trash2 className="w-3.5 h-3.5" />
