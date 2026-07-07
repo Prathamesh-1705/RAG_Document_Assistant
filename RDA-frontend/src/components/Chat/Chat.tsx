@@ -415,7 +415,7 @@ export const Chat = ({
         {showHistory && (
           <div className="w-64 border-r border-border bg-muted/10 flex flex-col h-full flex-shrink-0 absolute md:relative z-20 md:z-auto shadow-lg md:shadow-none bg-background md:bg-muted/10">
             <div className="p-3 border-b border-border flex items-center justify-between bg-background">
-              <span className="font-semibold text-sm flex items-center gap-2"><History className="w-4 h-4" /> Chat History</span>
+              <span className="font-semibold text-sm flex items-center gap-2"><History className="w-4 h-4" /> Chat History Test</span>
               <Button variant="ghost" size="icon" onClick={() => setShowHistory(false)} className="h-8 w-8 hover:bg-muted">
                 <X className="w-4 h-4" />
               </Button>
@@ -442,14 +442,13 @@ export const Chat = ({
                       <MessageSquare className="w-4 h-4 flex-shrink-0" />
                       <span className="truncate block leading-tight">{session.title}</span>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-6 w-6 opacity-40 hover:opacity-100 hover:bg-destructive/10 hover:text-destructive shrink-0 disabled:opacity-50 transition-opacity"
+                    <button
+                      type="button"
+                      className="h-6 w-6 opacity-40 hover:opacity-100 hover:bg-destructive/10 hover:text-destructive shrink-0 disabled:opacity-50 transition-opacity flex items-center justify-center rounded"
                       onClick={(e) => deleteSession(session.id, e)}
                     >
                       <Trash2 className="w-3.5 h-3.5" />
-                    </Button>
+                    </button>
                   </div>
                 ))}
               </div>
