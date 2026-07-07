@@ -432,11 +432,12 @@ export const Chat = ({
                     key={session.id}
                     onClick={() => { setCurrentSessionId(session.id); if (typeof window !== 'undefined' && window.innerWidth < 768) setShowHistory(false); }}
                     className={cn(
-                      "flex items-center relative p-2 rounded-md cursor-pointer text-sm transition-colors group w-full",
+                      "flex items-center relative p-2 rounded-md cursor-pointer text-sm transition-colors group",
                       currentSessionId === session.id
                         ? "bg-primary/10 text-primary font-medium"
                         : "hover:bg-muted text-foreground"
                     )}
+                    style={{ width: '240px', maxWidth: '240px' }}
                   >
                     <div className="flex items-center gap-2 min-w-0 flex-1 pr-14">
                       <MessageSquare className="w-4 h-4 flex-shrink-0" />
