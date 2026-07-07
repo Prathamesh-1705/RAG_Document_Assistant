@@ -432,19 +432,31 @@ export const Chat = ({
                     key={session.id}
                     onClick={() => { setCurrentSessionId(session.id); if (typeof window !== 'undefined' && window.innerWidth < 768) setShowHistory(false); }}
                     className={cn(
-                      "flex items-center justify-between p-2 rounded-md cursor-pointer text-sm transition-colors group w-full",
+                      "flex items-center relative p-2 rounded-md cursor-pointer text-sm transition-colors group w-full",
                       currentSessionId === session.id
                         ? "bg-primary/10 text-primary font-medium"
                         : "hover:bg-muted text-foreground"
                     )}
                   >
-                    <div className="flex items-center gap-2 min-w-0 flex-1 mr-1">
+                    <div className="flex items-center gap-2 min-w-0 flex-1 pr-14">
                       <MessageSquare className="w-4 h-4 flex-shrink-0" />
                       <span className="truncate block leading-tight">{session.title}</span>
                     </div>
                     <button
                       type="button"
-                      style={{ color: '#ef4444', marginLeft: '12px', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', background: 'none', border: 'none', padding: '2px 6px' }}
+                      style={{ 
+                        position: 'absolute', 
+                        right: '8px', 
+                        top: '50%', 
+                        transform: 'translateY(-50%)', 
+                        color: '#ef4444', 
+                        fontSize: '11px', 
+                        fontWeight: 'bold', 
+                        cursor: 'pointer', 
+                        background: 'none', 
+                        border: 'none', 
+                        padding: '2px 6px' 
+                      }}
                       onClick={(e) => deleteSession(session.id, e)}
                     >
                       Delete
